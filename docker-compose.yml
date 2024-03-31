@@ -1,0 +1,13 @@
+version: "3.1"
+services:
+  mysqldb:
+    image: mysql
+    container_name: mysqltwo
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - parkwithme_data:/var/lib/mysql
+volumes:
+  parkwithme_data:
